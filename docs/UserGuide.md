@@ -129,9 +129,9 @@ For additional information accompanying each segment, look for the following sym
 
 Syntax | What it means 
 -------|--------
-&emsp; :information_source: | precedes information that are useful to remember
-&emsp; :bulb: | precedes information that serve as tips for a feature
-&emsp; :warning: | precedes information as an important warning
+&emsp; :information_source: | Precedes information that are useful to remember.
+&emsp; :bulb: | Precedes information that serve as tips for a feature.
+&emsp; :warning: | Precedes information as an important warning.
 
 
 Jump right in to the next section: [2 Get Started](#2-get-started) to get you started!
@@ -178,7 +178,7 @@ Type the command in the command box and press Enter to execute it. e.g. typing h
 
 Some example commands you can try:
 
-* `student 1`: Views the first student show in the student list.
+* `student 1`: Views the first student shown in the student list.
 * `add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01`: Adds a student named `John Doe` to the TutAssistor.
 * `addtoclass si/3 tc/1`: Adds the 3rd student in the student list to the 1st class in the tuition class list.
 * `deleteclass 2`: Deletes the 2nd class shown in the tuition class list.
@@ -199,10 +199,10 @@ Now that you are more familiar with our app, make it yours! Head over to section
   e.g. in `add n/NAME`, `NAME` is a parameter which can be used as `add n/John Doe`.
 
 * Items in square brackets are optional.<br>
-  e.g `n/NAME [t/TAG]` can be used as `n/John Doe t/friend` or as `n/John Doe`.
+  e.g `n/NAME [r/REMARK]` can be used as `n/John Doe r/student` or as `n/John Doe`.
 
 * Items with `…`​ after them can be used zero or more times.<br>
-  e.g. `[t/TAG]…​` can be used as ` ` (i.e. 0 times), `t/friend`, `t/friend t/family` etc.
+  e.g. `si/STUDENT_INDEX [STUDENT_INDEX]…​` can be used as ` ` (i.e. 0 times), `si/1`, `si/1 2 3` etc.
 
 * Parameters can be in any order.<br>
   e.g. if the command specifies `n/NAME p/PHONE_NUMBER`, `p/PHONE_NUMBER n/NAME` is also acceptable.
@@ -392,7 +392,7 @@ atc s/James tc/3
 
 Removes an existing student from a tuition class.
 
-Format: `remove si/INDEX_STUDENT [INDEX_STUDENT]... tc/CLASS_INDEX`
+Format: `remove si/STUDENT_INDEX [STUDENT_INDEX]... tc/CLASS_INDEX`
 
 Examples:
 ```
@@ -448,6 +448,10 @@ rec 1
 
 ### 3.7 Find student/tuition class
 Filters the list based on the given keywords. The keywords are case-insensitive.
+<div markdown="span" class="alert alert-primary">
+:information_source: Note: Keywords will be matched entirely. 
+Example: A command `findclass phys` will not filter physics classes. 
+</div>
 
 #### Finding students by name: `find` | `f`
 Displays a list of students whose name matches the given keywords.
@@ -513,6 +517,9 @@ Sorts tuition class list according to time or alphabetical order.
   * The list will not be automatically sorted upon restarting TutAssistor, i.e., the user will have to execute the `sort` command again.
 
   * For alphabetical order, the sorting is case-insensitive. For example, `chem` is considered the same as `Chem`.
+
+  * For time order, the sorting assumes Gregorian calendar format. i.e. Sunday is considered the start of a week and 
+    Saturday is considered the end of a week.
 
 
 </div>
@@ -642,20 +649,22 @@ hence you do not lose any data.<br>
 
 ## 6 Command Summary
 
+Head back up to section [3 Features](#3-features) to refer to notes about the command format.
+
 Action | Format | Shortcut
 -------|--------|---------
 [***Add Student***](#31-add-studenttuition-class) | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [r/REMARK]` | `a`
-[***Add Class***](#31-add-studenttuition-class) |`addclass n/NAME l/LIMIT ts/TIMESLOT [s/NAME,NAME,NAME...] [r/REMARK]` | `ac`
+[***Add Class***](#31-add-studenttuition-class) |`addclass n/NAME l/LIMIT ts/TIMESLOT [s/NAME,...] [r/REMARK]` | `ac`
 [***View Student***](#32-view-studenttuition-class) | `student INDEX` | `vs`
 [***View Class***](#32-view-studenttuition-class) | `class INDEX` | `vc`
 [***Edit Student***](#33-edit-studenttuition-class) | `edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS]` | `e`
 [***Edit Class***](#33-edit-studenttuition-class) | `editclass INDEX [n/NAME] [l/LIMIT] [ts/TIMESLOT]` | `ec`
-[***Delete Student***](#34-delete-studenttuition-class) | `delete INDEX_STUDENT [INDEX_STUDENT]...` | `del`
-[***Delete Class***](#34-delete-studenttuition-class) | `deleteclass INDEX_CLASS [INDEX_CLASS]...` | `delc`
-[***Add Student to Class***](#35-addremove-student-from-class) | `addtoclass si/INDEX_STUDENT [INDEX_STUDENT]... tc/INDEX_CLASS`<br>or<br>`addtoclass s/NAME[,NAME...] tc/INDEX_CLASS` | `atc`
-[***Remove Students from Class***](#35-addremove-student-from-class) | `remove si/INDEX_STUDENT [INDEX_STUDENT]... tc/INDEX_CLASS` | `rm`
-[***Add Remarks to Student***](#36-add-remark-to-studenttuition-class) | `remark INDEX_STUDENT` | `re`
-[***Add Remarks to Class***](#36-add-remark-to-studenttuition-class) | `remarkclass INDEX_CLASS` | `rec`
+[***Delete Student***](#34-delete-studenttuition-class) | `delete STUDENT_INDEX [STUDENT_INDEX]...` | `del`
+[***Delete Class***](#34-delete-studenttuition-class) | `deleteclass CLASS_INDEX [CLASS_INDEX]...` | `delc`
+[***Add Student to Class***](#35-addremove-student-from-class) | `addtoclass si/STUDENT_INDEX [STUDENT_INDEX]... tc/CLASS_INDEX`<br>or<br>`addtoclass s/NAME[,NAME...] tc/CLASS_INDEX` | `atc`
+[***Remove Students from Class***](#35-addremove-student-from-class) | `remove si/STUDENT_INDEX [STUDENT_INDEX]... tc/CLASS_INDEX` | `rm`
+[***Add Remarks to Student***](#36-add-remark-to-studenttuition-class) | `remark STUDENT_INDEX` | `re`
+[***Add Remarks to Class***](#36-add-remark-to-studenttuition-class) | `remarkclass CLASS_INDEX` | `rec`
 [***Find Student by Name***](#37-find-studenttuition-class) | `find KEYWORD [KEYWORD]...` | `f`
 [***Find Class by Name***](#37-find-studenttuition-class) | `findclass KEYWORD [KEYWORD]...` | `fc`
 [***List all Students***](#38-list-all-studentstuition-classes) | `list` | `l`

@@ -1,7 +1,6 @@
 package seedu.address.logic.commands;
 
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
-import static seedu.address.logic.parser.CliSyntax.PREFIX_REMARK;
 import static seedu.address.model.Model.PREDICATE_SHOW_ALL_TUITIONS;
 
 import java.util.List;
@@ -29,10 +28,8 @@ public class RemarkClassCommand extends Command {
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Edits the remark of the tuition class identified "
             + "by the index number used in the last tuition classes listing.\n"
-            + "Parameters: INDEX (must be a positive integer) "
-            + PREFIX_REMARK + "[REMARK]\n"
-            + "Example: " + COMMAND_WORD + " 1 "
-            + PREFIX_REMARK + "physics homework: read chapter 3 pg 49-53.";
+            + "Parameters: CLASS_INDEX (must be a positive integer)\n"
+            + "Example: " + COMMAND_WORD + " 1 ";
 
     private static final Logger logger = LogsCenter.getLogger(RemarkClassCommand.class);
 
@@ -49,6 +46,7 @@ public class RemarkClassCommand extends Command {
 
     @Override
     public CommandResult execute(Model model) throws CommandException {
+        model.updateFilteredTuitionList(PREDICATE_SHOW_ALL_TUITIONS);
         List<TuitionClass> lastShownList = model.getFilteredTuitionList();
 
         if (index.getZeroBased() >= lastShownList.size()) {
@@ -62,7 +60,7 @@ public class RemarkClassCommand extends Command {
         Remark newRemark = UiManager.showRemarkEditor(name, remarkToEdit);
 
         TuitionClass editedClass = new TuitionClass(classToEdit.getName(), classToEdit.getLimit(),
-                classToEdit.getTimeslot(), classToEdit.getStudentList(), newRemark);
+                classToEdit.getTimeslot(), classToEdit.getStudentList(), newRemark, classToEdit.getId());
 
         logger.info("Remarks updated from: [" + remarkToEdit + "] to [" + newRemark.toString() + "]");
 
