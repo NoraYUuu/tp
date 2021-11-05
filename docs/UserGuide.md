@@ -7,6 +7,17 @@ title: User Guide
   <img src="images/ta_logo_fdfdfd_cropped.png">
 </p>
 
+
+<html>
+<script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js">
+</script>
+<script>addBackToTop({
+  diameter: 56,
+  backgroundColor: 'rgb(255, 82, 82)',
+  textColor: '#fff'
+})</script>
+</html>
+
 Welcome to the _TutAssistor User Guide_! Simply choose a topic below to find answers, learn about the features, and manage tutoring better.
 
 <div style="page-break-after: always;"></div>
