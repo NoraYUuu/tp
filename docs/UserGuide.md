@@ -3,8 +3,6 @@ layout: page
 title: User Guide
 ---
 
-#footer {display:none;
-
 <p align="center">
  <img src="images/ta_logo_fdfdfd_cropped.png">
 </p>
