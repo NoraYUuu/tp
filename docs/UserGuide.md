@@ -107,6 +107,7 @@ The features in this guide are formatted with the following conventions:
 * **Command Format** - Each command is accompanied by a set of information that you provide. Refer to the [Features](#3-features) below for details of each command.
 * **Examples** - Possible usage of each feature is provided. You may follow these examples when familiarising with the app.
 * **Screenshots** - A visualisation of the expected outcome is provided for some features.
+<div style="page-break-after: always;"></div>
 
 ### Technical terms
 
@@ -164,6 +165,7 @@ For example,
   ```
   java -jar TutAssistor.jar
   ```
+<div style="page-break-after: always;"></div>
 
 After launching the app, the GUI similar to the one shown below should appear in a few seconds. Note how the app contains some sample data.
 ![Ui](images/annotated_UI.png)
@@ -226,6 +228,8 @@ Refer to the [Additional Command Format Information](#4-additional-command-forma
 
 </div>
 
+<div style="page-break-after: always;"></div>
+
 ### 3.1 Add student/tuition class
 #### Adding a student: `add` | `a`
 As a tutor, you can add a student with his/her specified information such as name, phone number, email and address.
@@ -253,6 +257,8 @@ a n/Tom Ng p/97865342 e/tomng@eg.com a/221B Baker St r/Can only attend on even w
 :information_source: Note: `James Yeoh` and  <code>james &nbsp; yeoh</code> are considered the same person, namely `Name` is case-insensitive and the differences in whitespaces would not be considered.
 </div>
 
+<div style="page-break-after: always;"></div>
+
 #### Adding a tuition class: `addclass` | `ac`
 As a tutor, you can add a tuition class with a limit for student capacity at a specified [timeslot](#44-timeslot). TutAssistor will notify you if there are any conflicting time slots with existing classes.
 
@@ -273,6 +279,7 @@ addclass n/Chemistry l/16 ts/Thu 15:00-17:00 s/Bernice Yu,Richard Ng
 ```
 ac n/Math l/8 ts/Mon 11:00-14:00 r/Quiz on final lesson
 ```
+<div style="page-break-after: always;"></div>
 
 ### 3.2 View student/tuition class
 You can view all the details of a specified student or class in the information page.
@@ -309,6 +316,8 @@ vc 3
    <img src="images/class_view.png" alt="view class" width="650" height="240"><br>
    <i>Figure 4: Displaying details of a class in the information page</i>
 </p>
+
+<div style="page-break-after: always;"></div>
 
 ### 3.3 Edit student/tuition class
 You can edit details of an existing student or tuition class.
@@ -351,6 +360,9 @@ ec 1 n/Math ts/Wed 10:00-12:00
 :information_source: Note: The edited timeslot cannot conflict with an existing timeslot of another class.
 </div>
 <br>
+
+<div style="page-break-after: always;"></div>
+
 An example output of using the `editclass` command is shown below:
 
 <p align="center">
@@ -358,6 +370,7 @@ An example output of using the `editclass` command is shown below:
    <i>Figure 5: Example of executing `editclass 1 n/Math ts/Wed 10:00-12:00` command</i>
 </p>
 
+<div style="page-break-after: always;"></div>
 
 ### 3.4 Delete student/tuition class
 You can delete multiple students and tuition classes from TutAssistor.
@@ -404,6 +417,8 @@ or
 delc 1 2
 ```
 
+<div style="page-break-after: always;"></div>
+
 ### 3.5 Add/Remove student from class
 
 You can add students to an existing class. Similarly, you can remove students enrolled in a class as well.
@@ -443,6 +458,7 @@ addtoclass s/James,Felicia tc/2
 ```
 atc s/James tc/3
 ```
+<div style="page-break-after: always;"></div>
 
 The following is an example for `atc si/2 4 tc/1`.
 
@@ -466,6 +482,8 @@ remove si/1 tc/1
 rm si/1 2 3 4 tc/2
 ```
 
+<div style="page-break-after: always;"></div>
+
 ### 3.6 Add remark to student/tuition class
 
 #### Adding remark to a student: `remark` | `re`
@@ -482,6 +500,7 @@ or
 ```
 re 2
 ```
+<div style="page-break-after: always;"></div>
 
 #### Adding remark to a tuition class: `remarkclass` | `rec`
 
@@ -518,6 +537,7 @@ To remove the remark, simply enter an empty remark and press `OK`. If you choose
 :warning: For MacOS users, the remarks editor may open as a new tab instead of a window, which can cause the buttons to be not displayed correctly. To open the editor as a new window instead, go to System preferences > General > Prefer tabs and choose never.
 </div>
 
+<div style="page-break-after: always;"></div>
 
 ### 3.7 Find student/tuition class
 You can filter the list of students and classes based on the given keywords. The keywords are case-insensitive.
@@ -540,6 +560,8 @@ or
 f alice tan
 ```
 TutAssistor will display a list of all students with `alice` or `tan` in their name.
+
+<div style="page-break-after: always;"></div>
 
 #### Finding classes by name: `findclass` | `fc`
 
@@ -610,6 +632,8 @@ An example output of the `sort` command is shown below:
    <i>Figure 10: Example of executing `sort o/asc` command</i>
 </p>
 
+<div style="page-break-after: always;"></div>
+
 ### 3.10 View timetable: `timetable` | `tt`
 You can view all classes scheduled this week in a timetable.
 
@@ -631,6 +655,8 @@ For example, in Figure 11 below, the class on Monday, 15:00-15:15 is only 15 min
    <i>Figure 11: A timetable view of all tuition classes in a week</i>
 </p>
 
+<div style="page-break-after: always;"></div>
+
 ### 3.11 View today's classes: `today` | `td`
 You can view all classes scheduled today. <br>
 Additionally, a reminder of classes scheduled today will be displayed on the MainWindow when you open TutAssistor.
@@ -641,6 +667,8 @@ An example of the `today` command is shown below:
    <img src="images/today_view.png" alt="Today view" width="450" height="450"><br>
    <i>Figure 12: The view of all classes scheduled today in the Main Display Pane</i>
 </p>
+
+<div style="page-break-after: always;"></div>
 
 ### 3.12 View help: `help` | `h`
 
@@ -654,6 +682,8 @@ An example output of the `help` command is shown below:
    <img src="images/helpWindow.png" alt="Help window" width="280" height="520"><br>
    <i>Figure 13: The help window</i>
 </p>
+
+<div style="page-break-after: always;"></div>
 
 ### 3.13 Navigate command history
 
@@ -703,6 +733,8 @@ For example, given an existing class named `Biology`, you may add a new class al
 ### 4.2 Phone Number
 Phone number should only contain digits, and should be at least 3 digits long.
 
+<div style="page-break-after: always;"></div>
+
 ### 4.3 Email
 Email should be of the format `local-part@domain` and adhere to the following constraints:
 1. The `local-part` should only contain alphanumeric characters and these special characters, `+` `_` `.` `-`. The `local-part` may not start or end with any special characters.
@@ -728,6 +760,8 @@ where
   Examples:
   - Correct: `09:00-14:30`
   - Incorrect: `9:00-14:00`, `9am-2pm`, `9-2`, `09:00-08:00`
+
+<div style="page-break-after: always;"></div>
 
 ### 4.5 Index
 Index for a student or tuition class must be a positive integer, starting from `1`. It must not exceed the size of the list.
