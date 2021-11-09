@@ -447,7 +447,7 @@ atc s/James tc/3
 The following is an example for `atc si/2 4 tc/1`.
 
 <p align="center">
-   <img src="images/add_to_class.png" alt="Add students to class" height="444"><br>
+   <img src="images/add_to_class.png" alt="Add students to class" width="740"><br>
    <i>Figure 7: Example of executing `atc si/2 4 tc/1` command</i>
 </p>
 
