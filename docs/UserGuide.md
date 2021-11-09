@@ -654,7 +654,7 @@ For example, in Figure 11 below, the class on Monday, 15:00-15:15 is only 15 min
 </div>
 
 <p align="center">
-   <img src="images/time_table.png" alt="Timetable" width="620" height="540"><br>
+   <img src="images/time_table.png" alt="Timetable" height="450"><br>
    <i>Figure 11: A timetable view of all tuition classes in a week</i>
 </p>
 
