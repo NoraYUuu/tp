@@ -229,7 +229,10 @@ Refer to the [Additional Command Format Information](#4-additional-command-forma
 ### 3.1 Add student/tuition class
 #### Adding a student: `add` | `a`
 As a tutor, you can add a student with his/her specified information such as name, phone number, email and address.
-> [Read more on the requirements of the various parameters used.](#4-additional-command-format-information)
+
+<div markdown="span" class="alert alert-primary" markdown = "1">:bulb: **Tip:**
+[Read more on the requirements of the various parameters used.](#4-additional-command-format-information)
+</div>
 
 Format: `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [r/REMARK]`
 
