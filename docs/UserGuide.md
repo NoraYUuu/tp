@@ -78,7 +78,7 @@ with the application via graphical icons such as buttons.
 
 You do not have to worry at all even if you are new to CLI applications as
 this user guide will take you through step by step on how various
-features of the **TutAssistor** can be utilised, all directed towards
+features of **TutAssistor** can be utilised, all directed towards
 providing the best possible experience to the user.
 
 ### 1.2 What can TutAssistor do for you?
@@ -188,7 +188,7 @@ Type the command in the command box and press Enter to execute it. e.g. typing h
 Some example commands you can try:
 
 * `student 1`: Views the first student shown in the student list.
-* `add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01`: Adds a student named `John Doe` to the TutAssistor.
+* `add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01`: Adds a student named `John Doe` to TutAssistor.
 * `addtoclass si/3 tc/1`: Adds the 3rd student in the student list to the 1st class in the tuition class list.
 * `deleteclass 2`: Deletes the 2nd class shown in the tuition class list.
 * `clear`: Deletes all students and classes. Note that this action is irreversible.
