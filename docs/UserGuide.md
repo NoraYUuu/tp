@@ -92,6 +92,8 @@ regarding your students and lessons stress-free and efficiently. In the latest v
 * Efficiently create notes for each class/student
 * View scheduled lessons in a timetable
 
+<div style="page-break-after: always;"></div>
+
 ### 1.3 How to use this guide?
 
 #### Structure of this document
@@ -107,7 +109,6 @@ The features in this guide are formatted with the following conventions:
 * **Command Format** - Each command is accompanied by a set of information that you provide. Refer to the [Features](#3-features) below for details of each command.
 * **Examples** - Possible usage of each feature is provided. You may follow these examples when familiarising with the app.
 * **Screenshots** - A visualisation of the expected outcome is provided for some features.
-<div style="page-break-after: always;"></div>
 
 ### Technical terms
 
@@ -249,7 +250,7 @@ add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01
 a n/Tom Ng p/97865342 e/tomng@eg.com a/221B Baker St r/Can only attend on even weeks
 ```
 <p align="center">
-   <img src="images/addStudent.png" height="444" alt="Add student"><br>
+   <img src="images/addStudent.png" height="410" alt="Add student"><br>
    <i>Figure 2: Add a new student</i>
 </p>
 
@@ -300,6 +301,8 @@ vs 2
    <img src="images/student_view.png" alt="view student" width="650" height="180"><br>
    <i>Figure 3: Displaying a student's details in the information page</i>
 </p>
+
+<div style="page-break-after: always;"></div>
 
 #### 3.2.2 Viewing a tuition class: `class` | `vc`
 Format: `class INDEX`
