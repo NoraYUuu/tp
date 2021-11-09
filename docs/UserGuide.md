@@ -402,7 +402,7 @@ del 1 2
 An example output of using the `delete` command is shown below:
 
 <p align="center">
-   <img src="images/DeleteStudentUG.png" alt="Delete student" height="300"><br>
+   <img src="images/DeleteStudentUG.png" alt="Delete student"><br>
    <i>Figure 6: Example of executing `delete 1 2` command</i>
 </p>
 
