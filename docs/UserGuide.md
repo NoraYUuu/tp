@@ -220,7 +220,7 @@ This section contains all the information about the features of **TutAssistor**.
   e.g `n/NAME [r/REMARK]` can be used as `n/John Doe r/student` or as `n/John Doe`.
 
 * Items with `…`​ after them can be used zero or more times.<br>
-  e.g. `si/STUDENT_INDEX [STUDENT_INDEX]…​` can be used as ` ` (i.e. 0 times), `si/1`, `si/1 2 3` etc.
+  e.g. `si/STUDENT_INDEX [STUDENT_INDEX]…​` can be used as ` ` (i.e., 0 times), `si/1`, `si/1 2 3` etc.
 
 * Parameters can be in any order.<br>
   e.g. if the command specifies `n/NAME p/PHONE_NUMBER`, `p/PHONE_NUMBER n/NAME` is also acceptable.
