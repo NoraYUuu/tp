@@ -682,7 +682,7 @@ The possible usages of `sort` are given below:
 
 * For alphabetical order, the sorting is case-insensitive. For example, `chem` is considered the same as `Chem`.
 
-* For time order, the sorting assumes Gregorian calendar format. i.e. Sunday is considered the start of a week and
+* For time order, the sorting assumes Gregorian calendar format. i.e., Sunday is considered the start of a week and
   Saturday is considered the end of a week.
 
 </div>
