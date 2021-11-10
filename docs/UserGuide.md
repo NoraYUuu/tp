@@ -584,8 +584,6 @@ To remove the remark, simply enter an empty remark and press `OK`. If you choose
 :warning: For MacOS users, the remarks editor may open as a new tab instead of a window, which can cause the buttons to be not displayed correctly. To open the editor as a new window instead, go to System preferences > General > Prefer tabs and choose never.
 </div>
 
-<div style="page-break-after: always;"></div>
-
 ### 3.7 Find student/tuition class
 You can filter the list of students and classes based on the given keywords. The keywords are case-insensitive.
 <div markdown="span" class="alert alert-primary">
@@ -672,9 +670,9 @@ The possible usages of `sort` are given below:
 * `sort o/desc` sorts by descending alphabetical order
 * `sort o/time` sorts by time
 
-<div markdown="block" class="alert alert-primary">
-
 <div style="page-break-after: always;"></div>
+
+<div markdown="block" class="alert alert-primary">
 
 :information_source: Note: <br>
 
