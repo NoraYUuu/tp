@@ -267,8 +267,6 @@ a n/Tom Ng p/97865342 e/tomng@eg.com a/221B Baker St r/Can only attend on even w
 :information_source: Note: `James Yeoh` and  <code>james &nbsp; yeoh</code> are considered the same person, namely `Name` is case-insensitive and the differences in whitespaces would not be considered.
 </div>
 
-<div style="page-break-after: always;"></div>
-
 #### Adding a tuition class: `addclass` | `ac`
 You can add a tuition class with a limit for student capacity at a specified [timeslot](#44-timeslot). TutAssistor will notify you if there are any conflicting time slots with existing classes.
 
@@ -675,6 +673,8 @@ The possible usages of `sort` are given below:
 * `sort o/time` sorts by time
 
 <div markdown="block" class="alert alert-primary">
+
+<div style="page-break-after: always;"></div>
 
 :information_source: Note: <br>
 
