@@ -868,10 +868,10 @@ hence you do not lose any data.<br>
 **A**: Please type `help` to learn the command formats.<br>
 
 **Q**: Can I restore my data if I accidentally delete it?<br>
-**A**: No, `clear`, `delete`, and `deleteclass` are irreversible.<br>
+**A**: No, `clear`, `delete`, and `deleteclass` commands are irreversible.<br>
 
 **Q**: Can I export my timetable schedule from TutAssistor?<br>
-**A**: Currently we do not support exporting timetable. However, you can screenshot the timetable to store it locally.<br>
+**A**: Currently, we do not support exporting timetable. However, you can screenshot the timetable to store it locally.<br>
 
 **Q**: Who can I contact for further assistant?<br>
 **A**: If you need further assistance, please [email](mailto:e0564878@u.nus.edu) us.<br>
