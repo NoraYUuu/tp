@@ -98,7 +98,7 @@ regarding your students and lessons stress-free and efficiently. In the latest v
 
 #### Structure of this document
 
-We have structured this User Guide in a way to help you find what you need easily and quickly. In the next subsections, you will learn about how features are formatted and meanings of several symbols used in later sections. Section 3 - [Features](#3-features), documents the main features of TutAssistor and provides explanations on how to utilise them.
+We have structured this User Guide in a way to help you find what you need easily and quickly. In the following subsections, you will learn about how features are formatted and meanings of several symbols used in later sections. Section 3 - [Features](#3-features), documents the main features of TutAssistor and provides explanations on how to utilise them.
 
 
 #### Step-by-step guide for each feature
@@ -588,14 +588,14 @@ To remove the remark, simply enter an empty remark and press `OK`. If you choose
 You can filter the list of students and classes based on the given keywords. The keywords are case-insensitive.
 <div markdown="span" class="alert alert-primary">
 :information_source: Note: Keywords will be matched entirely.
-Example: A command `findclass phys` will not filter physics classes.
+Example: The command `findclass phys` will not filter physics classes.
 </div>
 
 #### Finding students by name: `find` | `f`
 You can search and find students using keywords.
 
 Usage scenario:
-* You would like to locate a student named `John`.
+* You would like to locate a student named `alice`.
 
 Format: `find KEYWORD [KEYWORD]...`
 
@@ -616,7 +616,7 @@ TutAssistor will display a list of all students with `alice` or `tan` in their n
 You can search and find tuition classes using keywords.
 
 Usage scenario:
-* You would like to locate all the Math classes in your list of tuition classes.
+* You would like to locate all the Physics classes in your list of tuition classes.
 
 Format: `findclass KEYWORD [KEYWORD]...`
 
@@ -850,7 +850,7 @@ For example, if the list consists of `5` students/tuition classes:
 ## 5 FAQ
 
 **Q**: Where is my data saved?<br>
-**A**: When our app is first opened, it will create a folder named data in the same folder where the `tutassistor.jar` file is located.
+**A**: When our app is first opened, it will create a folder named data in the same folder where the `Tutassistor.jar` file is located.
 This folder contains a file called `tutassistor.json` which contains all the details of your students and classes.
 
 **Q**: How do I transfer my data to another Computer?<br>
