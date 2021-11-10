@@ -143,29 +143,31 @@ Jump right in to the next section: [2 Get Started](#2-get-started) to get you st
 
 ## 2 Get Started
 
+This section gives you step-by-step instructions on how to download and open the application.
+
 ### 2.1 Installation guide
 
 #### For Windows
 1. Ensure you have Java 11 or above installed in your Computer. You may install it [here](https://www.oracle.com/java/technologies/downloads/).
 2. Download the latest TutAssistor release from [our github site](https://github.com/AY2122S1-CS2103T-T12-4/tp/releases).
-3. Double click the downloaded TutAssistor.jar file to launch TutAssistor.
+3. Double click the downloaded `Tutassistor.jar` file to launch TutAssistor.
 
 #### For Mac
 1. Ensure you have Java 11 or above installed in your Computer. You may install it [here](https://www.oracle.com/java/technologies/downloads/).
 2. Download the latest TutAssistor release from [our github site](https://github.com/AY2122S1-CS2103T-T12-4/tp/releases).
 3. Open Terminal.
-4. Change the active directory to the location of TutAssistor.jar.
+4. Change the active directory to the location of `Tutassistor.jar`.
 
 For example,
 
-  ```
-  cd Downloads
-  ```
+ ```
+ cd Downloads
+ ```
 4. Run the following command.
 
-  ```
-  java -jar TutAssistor.jar
-  ```
+ ```
+ java -jar TutAssistor.jar
+ ```
 <div style="page-break-after: always;"></div>
 
 After launching the app, the GUI similar to the one shown below should appear in a few seconds. Note how the app contains some sample data.
@@ -203,6 +205,10 @@ Now that you are more familiar with our app, make it yours! Head over to section
 <div style="page-break-after: always;"></div>
 
 ## 3 Features
+
+This section contains all the information about the features of **TutAssistor**. You may enter a command into the CLI to use each feature.
+
+
 <div markdown="block" class="alert alert-info">
 
 **:information_source: Notes about the command format:**<br>
@@ -233,11 +239,14 @@ Refer to the [Additional Command Format Information](#4-additional-command-forma
 
 ### 3.1 Add student/tuition class
 #### Adding a student: `add` | `a`
-As a tutor, you can add a student with his/her specified information such as name, phone number, email and address.
+You can add a student with his/her specified information such as name, phone number, email and address.
 
 <div markdown="span" class="alert alert-primary" markdown = "1">:bulb: **Tip:**
 [Read more on the requirements of the various parameters used.](#4-additional-command-format-information)
 </div>
+
+Usage scenario:
+* You want to register a new student who wants to enrol in one of your classes.
 
 Format: `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [r/REMARK]`
 
@@ -250,8 +259,8 @@ add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01
 a n/Tom Ng p/97865342 e/tomng@eg.com a/221B Baker St r/Can only attend on even weeks
 ```
 <p align="center">
-   <img src="images/addStudent.png" height="410" alt="Add student"><br>
-   <i>Figure 2: Add a new student</i>
+  <img src="images/addStudent.png" height="410" alt="Add student"><br>
+  <i>Figure 2: Add a new student</i>
 </p>
 
 <div markdown="span" class="alert alert-primary">
@@ -261,7 +270,10 @@ a n/Tom Ng p/97865342 e/tomng@eg.com a/221B Baker St r/Can only attend on even w
 <div style="page-break-after: always;"></div>
 
 #### Adding a tuition class: `addclass` | `ac`
-As a tutor, you can add a tuition class with a limit for student capacity at a specified [timeslot](#44-timeslot). TutAssistor will notify you if there are any conflicting time slots with existing classes.
+You can add a tuition class with a limit for student capacity at a specified [timeslot](#44-timeslot). TutAssistor will notify you if there are any conflicting time slots with existing classes.
+
+Usage scenario:
+* You want to create a new Math class for your students.
 
 Format: `addclass n/NAME l/LIMIT ts/TIMESLOT [s/NAME,NAME,NAME...] [r/REMARK]`
 
@@ -286,6 +298,10 @@ ac n/Math l/8 ts/Mon 11:00-14:00 r/Quiz on final lesson
 You can view all the details of a specified student or class in the information page.
 
 #### 3.2.1 Viewing a student: `student` | `vs`
+
+Usage scenario:
+* You want to obtain all the details of a particular student.
+
 Format: `student INDEX`
 
 Example:
@@ -298,13 +314,17 @@ vs 2
 ```
 
 <p align="center">
-   <img src="images/student_view.png" alt="view student" width="650" height="180"><br>
-   <i>Figure 3: Displaying a student's details in the information page</i>
+  <img src="images/student_view.png" alt="view student" width="650" height="180"><br>
+  <i>Figure 3: Displaying a student's details in the information page</i>
 </p>
 
 <div style="page-break-after: always;"></div>
 
 #### 3.2.2 Viewing a tuition class: `class` | `vc`
+
+Usage scenario:
+* You want to obtain all the details of a particular class.
+
 Format: `class INDEX`
 
 Example:
@@ -316,8 +336,8 @@ or
 vc 3
 ```
 <p align="center">
-   <img src="images/class_view.png" alt="view class" width="650" height="240"><br>
-   <i>Figure 4: Displaying details of a class in the information page</i>
+  <img src="images/class_view.png" alt="view class" width="650" height="240"><br>
+  <i>Figure 4: Displaying details of a class in the information page</i>
 </p>
 
 <div style="page-break-after: always;"></div>
@@ -330,6 +350,10 @@ You can edit details of an existing student or tuition class.
 </div>
 
 #### Editing a student: `edit` | `e`
+
+Usage scenario:
+* You realise that you entered the phone number of a student wrongly and want to rectify it.
+
 Format: `edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS]`
 
 Examples:
@@ -347,6 +371,11 @@ e 1 n/Jason Tan a/221b Baker Street
 
 
 #### Editing a class: `editclass` | `ec`
+
+Usage scenario:
+* You want to change the timing of a particular class.
+* You wish to update the name of a class.
+
 Format: `editclass INDEX [n/NAME] [l/LIMIT] [ts/TIMESLOT]`
 
 Examples:
@@ -360,7 +389,7 @@ ec 1 n/Math ts/Wed 10:00-12:00
 ```
 <br>
 <div markdown="span" class="alert alert-primary">
-:information_source: Note: The edited timeslot cannot conflict with an existing timeslot of another class.
+:information_source: Note: The edited timeslot cannot conflict with an existing timeslot of another class. See [timeslot](#44-timeslot) for more information.
 </div>
 <br>
 
@@ -369,8 +398,8 @@ ec 1 n/Math ts/Wed 10:00-12:00
 An example output of using the `editclass` command is shown below:
 
 <p align="center">
-   <img src="images/EditUserGuide.png" alt="Edit class" width="690" height="420"><br>
-   <i>Figure 5: Example of executing `editclass 1 n/Math ts/Wed 10:00-12:00` command</i>
+  <img src="images/EditUserGuide.png" alt="Edit class" width="690" height="420"><br>
+  <i>Figure 5: Example of executing `editclass 1 n/Math ts/Wed 10:00-12:00` command</i>
 </p>
 
 <div style="page-break-after: always;"></div>
@@ -388,6 +417,9 @@ You can delete multiple students and tuition classes from TutAssistor.
 
 #### Deleting students: `delete` | `del`
 
+Usage scenario:
+* You would like to remove a student who has dropped out of all your classes.
+
 Format: `delete STUDENT_INDEX [STUDENT_INDEX]...`
 
 Example:
@@ -402,11 +434,14 @@ del 1 2
 An example output of using the `delete` command is shown below:
 
 <p align="center">
-   <img src="images/DeleteStudentUG.png" alt="Delete student"><br>
-   <i>Figure 6: Example of executing `delete 1 2` command</i>
+  <img src="images/DeleteStudentUG.png" alt="Delete student"><br>
+  <i>Figure 6: Example of executing `delete 1 2` command</i>
 </p>
 
 #### Deleting tuition classes: `deleteclass` | `delc`
+
+Usage scenario:
+* You would like to delete a class that is not popular among your students.
 
 Format: `deleteclass CLASS_INDEX [CLASS_INDEX]...`
 
@@ -440,6 +475,9 @@ You can add one or more students to an existing class.
 
 </div>
 
+Usage scenario:
+* You would like to enrol a student into a particular class.
+
 Format:
 
 `addtoclass si/STUDENT_INDEX [STUDENT_INDEX]... tc/CLASS_INDEX`
@@ -466,14 +504,17 @@ atc s/James tc/3
 The following is an example for `atc si/2 4 tc/1`.
 
 <p align="center">
-   <img src="images/add_to_class.png" alt="Add students to class" width="740"><br>
-   <i>Figure 7: Example of executing `atc si/2 4 tc/1` command</i>
+  <img src="images/add_to_class.png" alt="Add students to class" width="740"><br>
+  <i>Figure 7: Example of executing `atc si/2 4 tc/1` command</i>
 </p>
 
 
 #### Removing existing students from a class: `remove` | `rm`
 
 You can remove existing students from a tuition class.
+
+Usage scenario:
+* You would like to update the students in a particular class, as a few students have dropped out of the class.
 
 Format: `remove si/STUDENT_INDEX [STUDENT_INDEX]... tc/CLASS_INDEX`
 
@@ -493,6 +534,9 @@ rm si/1 2 3 4 tc/2
 
 You can add remarks to a student.
 
+Usage scenario:
+* You would like to set a reminder for a student who has yet to pay tuition fees.
+
 Format: `remark STUDENT_INDEX`
 
 Example:
@@ -508,6 +552,10 @@ re 2
 #### Adding remark to a tuition class: `remarkclass` | `rec`
 
 You can add a remark for a tuition class.
+
+Usage scenario:
+* You would like to remind yourself of the homework that is due for a class.
+* You would like to keep track of the topics covered for a class.
 
 Format: `remarkclass CLASS_INDEX`
 
@@ -525,15 +573,15 @@ rec 1
 </div>
 
 
-Upon entering the `remark` or `remarkclass` command, a pop-up window with a text box is displayed for you to add, edit and remark.
+Upon entering the `remark` or `remarkclass` command, a pop-up window with a text box is displayed for you to add, edit or remove remarks.
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 To remove the remark, simply enter an empty remark and press `OK`. If you choose not to edit the remark, press `Cancel` to close the editor window.
 </div>
 
 <p align="center">
-   <img src="images/remark_editor_student.png" width="520" height="250" alt="Remark editor"><br>
-   <i>Figure 8: Editing remarks with editor window</i>
+  <img src="images/remark_editor_student.png" width="520" height="250" alt="Remark editor"><br>
+  <i>Figure 8: Editing remarks with editor window</i>
 </p>
 
 <div markdown="span" class="alert alert-primary">
@@ -551,6 +599,9 @@ Example: A command `findclass phys` will not filter physics classes.
 
 #### Finding students by name: `find` | `f`
 You can search and find students using keywords.
+
+Usage scenario:
+* You would like to locate a student named `John`.
 
 Format: `find KEYWORD [KEYWORD]...`
 
@@ -570,6 +621,9 @@ TutAssistor will display a list of all students with `alice` or `tan` in their n
 
 You can search and find tuition classes using keywords.
 
+Usage scenario:
+* You would like to locate all the Math classes in your list of tuition classes.
+
 Format: `findclass KEYWORD [KEYWORD]...`
 
 Example:
@@ -585,8 +639,8 @@ TutAssistor will display a list of all classes with `physics` or `chemistry` in 
 The filtered list should look similar to the example shown below:
 
 <p align="center">
-   <img src="images/find_screenshot.png" alt="Find student" height="444"><br>
-   <i>Figure 9: Example of executing `find alice tan` command</i>
+  <img src="images/find_screenshot.png" alt="Find student" height="444"><br>
+  <i>Figure 9: Example of executing `find alice tan` command</i>
 </p>
 
 ### 3.8 List all students/tuition classes
@@ -596,12 +650,17 @@ Shows the full list of students or classes.
 
 You can view all the students in TutAssistor.
 
+Usage scenario:
+* You would like to have an overview of all your students.
+
 Format: `list`
 
 #### Listing all classes: `listclass` | `lc`
 
 You can view all the tuition classes in TutAssistor.
 
+Usage scenario:
+* You would like to have an overview of all your classes.
 
 Format: `listclass`
 
@@ -631,14 +690,17 @@ The possible usages of `sort` are given below:
 An example output of the `sort` command is shown below:
 
 <p align="center">
-   <img src="images/sort.png" alt="Sort by ascending order" height="444"><br>
-   <i>Figure 10: Example of executing `sort o/asc` command</i>
+  <img src="images/sort.png" alt="Sort by ascending order" height="444"><br>
+  <i>Figure 10: Example of executing `sort o/asc` command</i>
 </p>
 
 <div style="page-break-after: always;"></div>
 
 ### 3.10 View timetable: `timetable` | `tt`
 You can view all classes scheduled this week in a timetable.
+
+Usage scenario:
+* You would like to have an overview of all the classes in a week.
 
 Format:
 ```
@@ -654,8 +716,8 @@ For example, in Figure 11 below, the class on Monday, 15:00-15:15 is only 15 min
 </div>
 
 <p align="center">
-   <img src="images/time_table.png" alt="Timetable" height="450"><br>
-   <i>Figure 11: A timetable view of all tuition classes in a week</i>
+  <img src="images/time_table.png" alt="Timetable" height="450"><br>
+  <i>Figure 11: A timetable view of all tuition classes in a week</i>
 </p>
 
 <div style="page-break-after: always;"></div>
@@ -664,11 +726,18 @@ For example, in Figure 11 below, the class on Monday, 15:00-15:15 is only 15 min
 You can view all classes scheduled today. <br>
 Additionally, a reminder of classes scheduled today will be displayed on the MainWindow when you open TutAssistor.
 
+Usage scenario:
+* You want to prepare the materials for all the upcoming classes today.
+
+Format:
+```
+today
+```
 An example of the `today` command is shown below:
 
 <p align="center">
-   <img src="images/today_view.png" alt="Today view" width="450" height="450"><br>
-   <i>Figure 12: The view of all classes scheduled today in the Main Display Pane</i>
+  <img src="images/today_view.png" alt="Today view" width="450" height="450"><br>
+  <i>Figure 12: The view of all classes scheduled today in the Main Display Pane</i>
 </p>
 
 <div style="page-break-after: always;"></div>
@@ -677,13 +746,16 @@ An example of the `today` command is shown below:
 
 If you are unsure of the format of any command, you may view a command summary, as well as a link to the user guide using the `help` command. <br>
 
+Usage scenario:
+* You are new to the app and want to learn the basic commands.
+
 Format: `help`
 
 An example output of the `help` command is shown below:
 
 <p align="center">
-   <img src="images/helpWindow.png" alt="Help window" width="280" height="520"><br>
-   <i>Figure 13: The help window</i>
+  <img src="images/helpWindow.png" alt="Help window" width="280" height="520"><br>
+  <i>Figure 13: The help window</i>
 </p>
 
 <div style="page-break-after: always;"></div>
@@ -694,6 +766,9 @@ When typing in the command box, you can use the **up** and **down** arrow keys t
 
 ### 3.14 Clear data: `clear`
 You can clear the data of all students and tuition classes.
+
+Usage scenario:
+* You wish to wipe out the current data and start afresh.
 
 Format: `clear`
 
@@ -715,7 +790,7 @@ _Details coming soon..._
 
 ## 4 Additional Command Format Information
 
-The requirements of the various parameters used are explained below. Head back to [Features](#3-features) to refer to general notes on the command format.
+The section explains the requirements of the various parameters used for the commands. Head back to [Features](#3-features) to refer to general notes on the command format.
 
 ### 4.1 Name
 
@@ -755,14 +830,14 @@ Ddd HH:mm-HH:mm
 where
 - `Ddd` is the day of the week, **abbreviated to the first three letters, with only the first letter capitalised**.
 
-  Examples:
-  - Correct: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`, `Sun`
-  - Incorrect: `mon`, `tuesday`, `WED`, `Thurs`, `Friday`, etc
+Examples:
+- Correct: `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`, `Sun`
+- Incorrect: `mon`, `tuesday`, `WED`, `Thurs`, `Friday`, etc
 - `HH:mm` is the time with 2 digits for the hour and 2 digits for the minute. The first time must be earlier in the day than the second time.
 
-  Examples:
-  - Correct: `09:00-14:30`
-  - Incorrect: `9:00-14:00`, `9am-2pm`, `9-2`, `09:00-08:00`
+Examples:
+- Correct: `09:00-14:30`
+- Incorrect: `9:00-14:00`, `9am-2pm`, `9-2`, `09:00-08:00`
 
 <div style="page-break-after: always;"></div>
 
@@ -778,6 +853,10 @@ For example, if the list consists of `5` students/tuition classes:
 
 ## 5 FAQ
 
+**Q**: Where is my data saved?<br>
+**A**: When our app is first opened, it will create a folder named data in the same folder where the `tutassistor.jar` file is located.
+This folder contains a file called `tutassistor.json` which contains all the details of your students and classes.
+
 **Q**: How do I transfer my data to another Computer?<br>
 **A**: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous TutAssistor home folder.<br>
 
@@ -787,6 +866,15 @@ hence you do not lose any data.<br>
 
 **Q**: What should I do if I am unsure of the command formats?<br>
 **A**: Please type `help` to learn the command formats.<br>
+
+**Q**: Can I restore my data if I accidentally delete it?<br>
+**A**: No, `clear`, `delete`, and `deleteclass` are irreversible.<br>
+
+**Q**: Can I export my timetable schedule from TutAssistor?<br>
+**A**: Currently we do not support exporting timetable. However, you can screenshot the timetable to store it locally.<br>
+
+**Q**: Who can I contact for further assistant?<br>
+**A**: If you need further assistance, please [email](mailto:e0564878@u.nus.edu) us.<br>
 
 --------------------------------------------------------------------------------------------------------------------
 <div style="page-break-after: always;"></div>
