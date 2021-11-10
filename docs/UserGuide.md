@@ -393,8 +393,6 @@ ec 1 n/Math ts/Wed 10:00-12:00
 </div>
 <br>
 
-<div style="page-break-after: always;"></div>
-
 An example output of using the `editclass` command is shown below:
 
 <p align="center">
